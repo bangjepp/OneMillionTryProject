@@ -1,4 +1,8 @@
-plotlibrary(readr)
-test2 <- read_delim("test2.csv", ";", escape_double = FALSE, 
-                    trim_ws = TRUE)
 
+
+plot(sub$Ht (m), 
+     sub$Crown diameter (m),
+     col="red", 
+     xlab="Высота дерева, м", 
+     ylab = "Диаметр кроны, м", 
+     main = "Зависимость диаметра от высоты")
