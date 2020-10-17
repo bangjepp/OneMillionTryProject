@@ -186,20 +186,12 @@ table_c = na.exclude(table_c)
 
 table_c = table_c %>% mutate("Easting_BC" = case_when(
   quadr == "TF" ~ E +600000,
-))
-table_c = table_c %>% mutate("Northing_BC" = case_when(
-  quadr == "TF" ~ N +300000,
-))
-table_c = table_c %>% mutate("Easting_BC" = case_when(
   quadr == "TG" ~ E +700000,
-))
-table_c = table_c %>% mutate("Northing_BC" = case_when(
-  quadr == "TG" ~ N +300000,
-))
-table_c = table_c %>% mutate("Easting_BC" = case_when(
   quadr == "TL" ~ E +600000,
 ))
 table_c = table_c %>% mutate("Northing_BC" = case_when(
+  quadr == "TF" ~ N +300000,
+  quadr == "TG" ~ N +300000,
   quadr == "TL" ~ N +200000,
 ))
 
@@ -224,7 +216,5 @@ table_WGS[1,]
 coord = cbind(table_c,table_WGS)
 head(coord)
 
-
-
-
+citytrees2
 
